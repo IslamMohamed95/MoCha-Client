@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/providers/services/user.service';
 
@@ -20,18 +20,18 @@ export class HomeComponent implements OnInit {
   Friends: any;
   FriendImg: any;
 
-  postsForm = new FormGroup({
-    description: new FormControl('', [
+  postsForm = new UntypedFormGroup({
+    description: new UntypedFormControl('', [
       Validators.required,
       Validators.minLength(1),
     ]),
   });
 
-  updatePostForm = new FormGroup({
-    post: new FormControl('', [Validators.minLength(1), Validators.required]),
+  updatePostForm = new UntypedFormGroup({
+    post: new UntypedFormControl('', [Validators.minLength(1), Validators.required]),
   });
-  commentForm = new FormGroup({
-    comment: new FormControl('', [Validators.required]),
+  commentForm = new UntypedFormGroup({
+    comment: new UntypedFormControl('', [Validators.required]),
   });
 
   constructor(public userservice: UserService, private route: Router) {}

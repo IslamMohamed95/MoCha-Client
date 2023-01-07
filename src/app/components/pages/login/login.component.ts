@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/providers/services/user.service';
 
@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   isSubmitted : Boolean = false
 
   
-  loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+  loginForm = new UntypedFormGroup({
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    password: new UntypedFormControl('', [Validators.required, Validators.minLength(6)])
   })
 
   get email(){return this.loginForm.get('email')}

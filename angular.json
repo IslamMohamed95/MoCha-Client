@@ -103,7 +103,6 @@
       }
     }
   },
-  "defaultProject": "NTI-Project-Angular",
   "cli": {
     "analytics": "fd05ddd5-7a5e-45f7-9599-2c15122e1990"
   }

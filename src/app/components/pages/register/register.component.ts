@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/providers/services/user.service';
 
@@ -14,13 +14,13 @@ export class RegisterComponent implements OnInit {
   emailUsedBefore : Boolean = false
   isSubmitted : Boolean = false           //A flag cause submitted not working in (FormGroup) in HTML
   
-  registerForm = new FormGroup({
-    firstname: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    lastname: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    birthDate: new FormControl('', [Validators.required]),
-    gender: new FormControl('', [Validators.required])
+  registerForm = new UntypedFormGroup({
+    firstname: new UntypedFormControl('', [Validators.required, Validators.minLength(3)]),
+    lastname: new UntypedFormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    password: new UntypedFormControl('', [Validators.required, Validators.minLength(6)]),
+    birthDate: new UntypedFormControl('', [Validators.required]),
+    gender: new UntypedFormControl('', [Validators.required])
   })
 
   constructor(private _auth:UserService, private _route: Router) {}

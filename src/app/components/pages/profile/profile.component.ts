@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   RequiredValidator,
   Validators,
 } from '@angular/forms';
@@ -27,13 +27,13 @@ export class ProfileComponent implements OnInit {
 
   accImg: any;
 
-  updateFrom = new FormGroup({
-    firstname: new FormControl(`${this._auth.userData.firstname}`, []),
-    lastname: new FormControl(`${this._auth.userData.lastname}`, []),
-    email: new FormControl(`${this._auth.userData.email}`, []),
-    password: new FormControl(`${this._auth.userData.password}`, []),
-    birthDate: new FormControl(`${this._auth.userData.birthDate}`, []),
-    gender: new FormControl(`${this._auth.userData.gender}`, []),
+  updateFrom = new UntypedFormGroup({
+    firstname: new UntypedFormControl(`${this._auth.userData.firstname}`, []),
+    lastname: new UntypedFormControl(`${this._auth.userData.lastname}`, []),
+    email: new UntypedFormControl(`${this._auth.userData.email}`, []),
+    password: new UntypedFormControl(`${this._auth.userData.password}`, []),
+    birthDate: new UntypedFormControl(`${this._auth.userData.birthDate}`, []),
+    gender: new UntypedFormControl(`${this._auth.userData.gender}`, []),
   });
 
   constructor(
