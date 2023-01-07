@@ -23,7 +23,7 @@
     "classlist": "^2.0.0",
     "date-and-time": "^2.0.1",
     "jquery": "^3.6.0",
-    "ngx-bootstrap": "^7.1.2",
+    "ngx-bootstrap": "^7.0.0",
     "node": "^12.14.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
