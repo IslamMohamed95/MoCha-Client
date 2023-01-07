@@ -35,8 +35,7 @@
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/@fortawesome/fontawesome-free/js/all.min.js",
               "./node_modules/jquery/dist/jquery.js"
-            ],
-            "preserveSymlinks": true
+            ]
           },
           "configurations": {
             "production": {
