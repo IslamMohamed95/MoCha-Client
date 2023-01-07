@@ -24,7 +24,7 @@
     "date-and-time": "^2.0.1",
     "jquery": "^3.6.0",
     "ngx-bootstrap": "^7.0.0",
-    "node": "^14.0.0",
+    "node": "^14.21.2",
     "rxjs": "^6.5.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
