@@ -19,6 +19,7 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { FilterFriendsPipe } from './pipe/filter-friends.pipe';
 import { FriendComponent } from './components/pages/friend/friend.component';
 import { UserpageComponent } from './components/pages/userpage/userpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -44,7 +45,8 @@ import { UserpageComponent } from './components/pages/userpage/userpage.componen
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass: UserInterceptor, multi:true}
