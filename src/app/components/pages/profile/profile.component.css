@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  height: 100vh !important;
+  background-image: url("../../../../assets/LoginBG.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#shapeWhite1,
+#shapeWhite2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#shapeWhite1 {
+  top: 10%;
+  left: 20%;
+}
+
+#shapeWhite2 {
+  bottom: 3%;
+  right: 35%;
+}
+
+.Menu {
+  position: absolute;
+  top: 10.5%;
+  left: 1%;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 8px 1px black;
+  height: 80vh;
+  width: 5%;
+  border-radius: 15px;
+  padding: 2% 0;
+}
+
+/* .Menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Menu ul li {
+  margin: 10% 0;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.Menu ul hr {
+  width: 60%;
+  height: 1px;
+  background-color: white;
+} */
+
+.container {
+  padding: 0;
+  margin: 0;
+  max-width: 100% !important;
+  height: 100% !important;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+#FormDetails {
+  position: relative;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
+  );
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.dataCont {
+  padding: 2%;
+  width: 80%;
+}
+
+#FormDetails button:first-child {
+  background-color: red;
+  outline: unset !important;
+
+  border: none !important;
+}
+
+#FormDetails button {
+  font-size: 30px;
+}
+
+.data span,
+.names span {
+  color: rgb(182, 182, 182) !important;
+}
+
+.data label,
+.names label {
+  font-size: 45px !important;
+}
+
+/* --------------Handle Edit Click Event----------------- */
+.profileViewHandler {
+  display: none !important;
+}
+
+.ProfileEditHandler {
+  height: 75vh;
+  width: 80%;
+  transform: translate(10%, 16.5%);
+  visibility: visible !important;
+  position: unset !important;
+}
+
+#profileView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100% !important;
+}
+
+.names > div {
+  width: 100%;
+}
+
+.names > div,
+.data {
+  align-self: flex-start !important;
+  text-align: left !important;
+}
+
+.data,
+.names {
+  width: 100%;
+}
+
+#profileView img {
+  margin-bottom: 5%;
+  border-radius: 50%;
+
+  align-self: center !important;
+}
+
+#profileView label {
+  color: white;
+}
+/* ----------------------------------------------------- */
+
+#imgUpload {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+#imgUpload div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#imgUpload div img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#shape1 {
+  position: absolute;
+  top: -10%;
+  transform: rotateY(60deg);
+  right: -35%;
+  width: 500px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: orange;
+  z-index: -1;
+}
+
+.names {
+  align-items: center;
+}
+
+#imgUpload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input {
+  margin: 0 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.data label,
+data input {
+  margin: 5px 10px;
+}
+
+.data {
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.names,
+.data {
+  display: flex;
+}
+
+button {
+  margin-top: 3%;
+}
+
+/*-------------------- Edit container --------------------*/
+.editContainer {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0;
+  transform: translateX(1300px);
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 8px 1px black;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 2%;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.imageContainer div {
+  width: 350px;
+
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(177, 164, 164);
+}
+
+.imageContainer div:hover {
+  box-shadow: 1px 1px 5px 1px white;
+  transition: all 0.7s ease-in-out;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.imageContainer label {
+  position: absolute;
+  font-size: 4rem;
+  color: rgba(155, 154, 154, 0.2);
+}
+
+.imageContainer input {
+  display: none;
+}
+
+.imageContainer div:hover .fa-camera,
+.imageContainer div:hover {
+  color: white;
+  border-color: white;
+  transition: all 0.7s ease-in-out;
+}
+
+.imageContainer .fa-camera:hover {
+  cursor: pointer;
+}
+
+#contentContainer label {
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+}
+
+#contentContainer input,
+#contentContainer select {
+  margin: 5px;
+  padding: 2px 5px;
+  width: 250px;
+  font-size: 25px;
+}

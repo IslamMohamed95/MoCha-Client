@@ -1,0 +1,229 @@
+<section class="main">
+  <div class="mainCont">
+    <div class="row">
+      <div class="d-flex d-md-none intro">
+        <div>
+          <img [src]="accImg" />
+          <div>
+            <p>
+              {{ userservice.userData.firstname }}
+              {{ userservice.userData.lastname }}
+            </p>
+            <i
+              (click)="this.toggleSetting()"
+              [ngClass]="setting ? 'fa fa-cog activeIcon' : 'fa fa-cog'"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <section id="left" [ngClass]="setting ? 'activeSett' : ''" class="col-4">
+        <div
+          class="d-none d-md-flex flex-row justify-content-start align-items-center me-2"
+        >
+          <img [src]="accImg" />
+          <p class="text-white fw-bold">
+            {{ userservice.userData.firstname }}
+            {{ userservice.userData.lastname }}
+          </p>
+        </div>
+        <div class="settcont">
+          <div>
+            <ul class="list-unstyled mt-3">
+              <li>
+                <a href=""><i class="fas fa-user-friends me-2"></i> Friends</a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-users me-2"></i> Groups</a>
+              </li>
+              <li>
+                <a href=""
+                  ><i class="fas fa-place-of-worship me-2"></i>MarketPlace</a
+                >
+              </li>
+            </ul>
+          </div>
+          <hr class="d-none d-md-block bg-light" />
+          <div id="shortcuts">
+            <h4 class="fw-bold text-danger">Your Shortcuts</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><i class="fas fa-users me-2"></i> NTI-Group</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div></div>
+      </section>
+
+      <section id="mid" class="col-4">
+        <div id="story" class="d-flex flex-column align-items-start">
+          <div id="accStory">
+            <div
+              id="container1"
+              class="d-flex flex-column justify-content-start align-items-center"
+            >
+              <img class="imgStory" [src]="accImg" />
+              <div id="container2">
+                <div
+                  id="storyCont"
+                  class="d-flex flex-column align-items-center justify-content-sm-around"
+                >
+                  <a id="plus"><i class="fas fa-plus"></i></a>
+                  <div id="leftD"></div>
+                  <div id="rightD"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            [formGroup]="postsForm"
+            (ngSubmit)="createPost()"
+            id="postCont"
+            class="mt-2 flex-column justify-content-center"
+          >
+            <div id="post">
+              <textarea
+                placeholder="Create Post!"
+                id="scrollbar"
+                formControlName="description"
+              ></textarea>
+            </div>
+            <div
+              class="btns d-flex flex-row justify-content-start align-items-center"
+            >
+              <button class="mt-2 btn btn-success">Post</button>
+              <button class="mt-2 btn btn-danger" (click)="clearPost()">
+                Clear
+              </button>
+            </div>
+          </form>
+
+          <div id="viewPostsCont">
+            <form
+              id="postView"
+              *ngFor="let post of userservice.userPosts"
+              [ngClass]="{ active: post.active }"
+              class="d-flex flex-column justify-content-center align-items-start"
+            >
+              <div
+                class="post d-flex flex-column justify-content-between align-items-center w-100 p-3"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center"
+                >
+                  <div>
+                    <img [src]="accImg" alt="userImage" />
+                    {{ userservice.userData.firstname }}
+                    {{ userservice.userData.lastname }}
+                  </div>
+                  <button id="editBtns" (click)="toggleEditState(post)">
+                    <i id="editIcon" class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <ul
+                    [ngClass]="post.active ? 'AfterEditIconClicked' : ''"
+                    class="list-unstyled p-2 d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <li (click)="handleEditClick(post)">Edit</li>
+                    <hr />
+                    <li (click)="deletePost(post)" class="text-danger fw-bold">
+                      Delete
+                    </li>
+                  </ul>
+                </div>
+                <p class="postContent">{{ post.description }}</p>
+              </div>
+
+              <form
+                id="commentCont"
+                [formGroup]="commentForm"
+                (ngSubmit)="commentFunc(post)"
+                class="d-flex flex-column justify-content-center align-items-start"
+              >
+                <div
+                  id="commentDet"
+                  class="d-flex flex-row justify-content-start align-items-center"
+                >
+                  <textarea
+                    id="comment"
+                    placeholder="Comment"
+                    formControlName="comment"
+                  ></textarea>
+                </div>
+                <div
+                  id="commentDis"
+                  *ngFor="let c of post.comments"
+                  class="d-flex flex-row justify-content-start align-items-center"
+                >
+                  <img [src]="accImg" alt="" />
+                  <p>{{ c.comment }}</p>
+                </div>
+                <button class="mt-2 btn btn-primary">Comment</button>
+              </form>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="right" class="col-4">
+        <div>
+          <div
+            id="searchCont"
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <input
+              type="search"
+              placeholder="Contacts"
+              class="form-control"
+              [(ngModel)]="filterFriend"
+            />
+            <i class="fas fa-search"></i>
+          </div>
+          <hr />
+          <ul
+            class="list-unstyled d-flex flex-column justify-content-center align-items-center"
+          >
+            <li
+              *ngFor="let friend of Friends | filterFriends : filterFriend"
+              class="text-white fw-bold d-flex flex-row justify-content-start align-items-center"
+              (click)="DisplayFriendPage(friend._id)"
+            >
+              <span>
+                <img class="img-fluid" [src]="FriendImg" alt="" />
+                {{ friend.firstname + " " + friend.lastname }}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!---------------------- Edit post form ---------------------->
+  <div
+    id="editForm"
+    class="d-flex flex-column justify-content-center align-items-center"
+    [ngClass]="editButton ? 'afterEditButtonClick' : ''"
+  >
+    <form class="p-3" [formGroup]="updatePostForm">
+      <span
+        class="mb-4 d-flex flex-row justify-content-end align-items-center"
+        (click)="closeEdit()"
+      >
+        <i class="fas fa-times"></i>
+      </span>
+      <div id="post">
+        <textarea id="scrollbar" name="post" formControlName="post"></textarea>
+      </div>
+      <div
+        class="btns d-flex flex-row justify-content-start align-items-center"
+      >
+        <button class="mt-2 btn btn-warning" (click)="update()">Update</button>
+        <button class="mt-2 btn btn-danger" (click)="clearUpdatePost()">
+          Clear
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

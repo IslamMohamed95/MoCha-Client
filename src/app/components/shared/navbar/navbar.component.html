@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand navbar-light">
+  <div class="container-fluid">
+    <div class="d-flex flex-row align-items-center justify-content-center">
+      <a class="Logo navbar-brand fw-bolder text-info fs-4" routerLink="/home"
+        >MoCha</a
+      >
+      <div *ngIf="_auth.isAuthed" class="d-none d-md-block">
+        <input
+          class="form-control"
+          [(ngModel)]="filterUser"
+          placeholder="Search"
+          (click)="clickEffect()"
+        />
+        <i class="fas fa-search"> </i>
+        <ul
+          id="searchList"
+          class="d-felx flex-column justify-content-center align-items-center"
+          [ngClass]="
+            searchInput === 'Show' ? 'SearchListEffect' : 'removeSearchEffect'
+          "
+        >
+          <li
+            class="d-flex flex-row justify-content-start align-items-center"
+            *ngFor="let U of _auth.Users | filterAll : filterUser"
+          >
+            <img class="img-fluid" [src]="userImg" alt="userImg" />
+            <p (click)="User(U)" class="m-0 p-0">
+              {{ U.firstname }} {{ U.lastname }}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="collapse navbar-collapse linksContainer"
+    id="navbarSupportedContent"
+    *ngIf="_auth.isAuthed"
+  >
+    <button id="iconCont" (click)="HandelIcon()">
+      <i class="fas fa-caret-down"></i>
+    </button>
+
+    <ul
+      [ngClass]="iconState ? 'iconClicked' : ''"
+      class="listNav navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-75"
+    >
+      <li class="nav-item" (click)="hideList()">
+        <a class="nav-link text-white" routerLink="/profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          aria-current="page"
+          routerLink="/"
+          (click)="Logout($event)"
+          >Logout</a
+        >
+      </li>
+      <li class="nav-item Danger">
+        <a
+          class="nav-link text-danger"
+          aria-current="page"
+          routerLink="/"
+          (click)="logoutAll($event)"
+          >Logout All</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

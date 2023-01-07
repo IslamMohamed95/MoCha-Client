@@ -1,0 +1,3 @@
+1- Components (PagesFolder/(register - login - profile) - SharedFolder/(navbar - footer))
+2- Interfaces(User)
+3- Providers(ServicesFolder/User)

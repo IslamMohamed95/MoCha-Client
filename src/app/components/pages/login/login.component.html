@@ -1,0 +1,54 @@
+<section class="login">
+  <div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class="border">
+      <i class="fas fa-home text-info"></i>
+      <div class="formContainer">
+        <div class="mb-3 inputs">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input
+            type="email"
+            placeholder="Example@..."
+            formControlName="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            (input)="invalidData = true"
+          />
+        </div>
+        <div class="alert alert-danger" *ngIf="email?.invalid && isSubmitted">
+          <p class="m-0" *ngIf="password?.errors?.['required']">
+            * email is required
+          </p>
+        </div>
+
+        <div class="mb-3 inputs">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            placeholder="Pa*****"
+            formControlName="password"
+            class="form-control"
+          />
+        </div>
+        <div
+          class="alert alert-danger p-2 px-3"
+          *ngIf="password?.invalid && isSubmitted"
+        >
+          <p class="m-0" *ngIf="password?.errors?.['minlength']">
+            * Password must be "6" chars at least
+          </p>
+          <p class="m-0" *ngIf="password?.errors?.['required']">
+            * Password is required
+          </p>
+        </div>
+
+        <div
+          class="btn d-flex flex-column justify-content-center align-items-center"
+        >
+          <button class="btn btn-info text-white">Login</button>
+          <a routerLink="/register">or? Create new account?</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,198 @@
+<section>
+  <!-- <div id="shapeWhite1"></div>
+    <div id="shapeWhite2"></div> -->
+
+  <!--------------------------- SideBar ------------------------------>
+  <!-- <div class="Menu text-center">
+    <ul>
+      <li>
+        <a href=""><i class="fas fa-ban"></i></a>
+      </li>
+      <hr />
+      <li>
+        <a href=""><i class="fas fa-globe-americas"></i></a>
+      </li>
+      <hr />
+      <li>
+        <a href=""><i class="fas fa-mobile-alt"></i></a>
+      </li>
+    </ul>
+  </div> -->
+  <!--------------------------- End ------------------------------>
+
+  <!----------------------- Detail Form ------------------------>
+
+  <div
+    id="FormDetails"
+    [ngClass]="editClicked === 'done' ? 'profileViewHandler' : ''"
+    class="container"
+  >
+    <form id="profileView">
+      <div id="imgUpload w-100 ">
+        <div class="text-center">
+          <img
+            id="imgProfile"
+            [src]="accImg"
+            alt="Profile Picture"
+            name="profilePic"
+          />
+        </div>
+      </div>
+
+      <div class="dataCont">
+        <div class="names">
+          <div id="fname">
+            <label>
+              <span>First Name:</span> {{ _auth?.userData.firstname }}
+            </label>
+          </div>
+
+          <div id="lname">
+            <label>
+              <span>Last Name: </span> {{ _auth?.userData.lastname }}
+            </label>
+          </div>
+        </div>
+
+        <div class="data">
+          <label> <span>Email: </span> {{ _auth?.userData.email }} </label>
+        </div>
+
+        <div class="data">
+          <label>
+            <span>Birth-Date: </span>
+            {{ _auth?.userData.birthDate | date : "dd/MM/yyyy" }}
+          </label>
+        </div>
+
+        <div class="data">
+          <label class="form-label">
+            <span>Gender: </span> {{ _auth?.userData.gender }}</label
+          >
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-success fw-bolder" routerLink="/home">
+            Back
+          </button>
+          <button
+            id="edit"
+            class="btn btn-success fw-bolder"
+            (click)="EditClicked('done')"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--------------------------- End ---------------------------------->
+
+  <!--------------------------- Edit Form  --------------------------->
+
+  <div
+    [ngClass]="showEditForm === 'show' ? 'ProfileEditHandler' : ''"
+    class="editContainer"
+  >
+    <form
+      id="ProfileEdit"
+      class="text-center"
+      [formGroup]="updateFrom"
+      (ngSubmit)="handleUpdateFrom()"
+    >
+      <div
+        class="imageContainer d-flex flex-column align-items-center justify-content-center"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <img [src]="selectedImgOnEdit ? viewImg : accImg" name="profilePic" />
+          <label for="FileUpload"><i class="fas fa-camera"></i></label>
+          <input type="file" id="FileUpload" (change)="onChange($event)" />
+        </div>
+      </div>
+
+      <div
+        id="contentContainer"
+        class="d-flex flex-row justify-content-evenly align-items-center"
+      >
+        <div
+          id="leftContect"
+          class="d-flex flex-column justify-content-center align-items-start"
+        >
+          <div>
+            <label>First Name :</label>
+            <input
+              type="text"
+              name="firstname"
+              formControlName="firstname"
+              value="{{ _auth?.userData.firstname }}"
+            />
+          </div>
+
+          <div>
+            <label>Email :</label>
+            <input
+              type="email"
+              name="email"
+              formControlName="email"
+              value=" {{ _auth?.userData.email }}"
+            />
+          </div>
+
+          <div>
+            <label>Birth-Date :</label>
+            <input
+              type="date"
+              name="birthDate"
+              formControlName="birthDate"
+              value="{{ _auth.userData.birthDate }}"
+            />
+          </div>
+        </div>
+
+        <div
+          id="rightContent"
+          class="d-flex flex-column justify-content-center align-items-start"
+        >
+          <div>
+            <label>Last Name :</label>
+            <input
+              type="text"
+              name="lastname"
+              formControlName="lastname"
+              value=" {{ _auth?.userData.lastname }}"
+            />
+          </div>
+
+          <div>
+            <label>Password :</label>
+            <input
+              type="password"
+              name="password"
+              formControlName="password"
+              value=" {{ _auth?.userData.password }}"
+            />
+          </div>
+
+          <div>
+            <label>Gender :</label>
+            <select
+              class="text-center"
+              name="gender"
+              formControlName="gender"
+              value="{{ _auth?.userData.gender }}"
+            >
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button type="submit" id="editBtn" class="btn btn-success fw-bolder">
+        Update
+      </button>
+    </form>
+  </div>
+  <!--------------------------- End ---------------------------------->
+</section>

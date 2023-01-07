@@ -1,0 +1,734 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (min-width: 320px) {
+  #iconCont {
+    transform: translateX(-100%) !important;
+  }
+  /*-----------------*/
+  nav {
+    padding: 0 !important;
+  }
+  .Logo {
+    font-size: 25px !important;
+  }
+  /*---------------*/
+  .fa-home {
+    font-size: 10em !important;
+  }
+  .login {
+    background-position: center !important;
+  }
+
+  .login .formContainer {
+    width: 80% !important;
+  }
+  .login form {
+    padding: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .login form label {
+    margin-bottom: 0.5% !important;
+    width: 100%;
+    align-items: flex-start !important;
+    font-size: 20px !important;
+  }
+
+  .login form .inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    margin-bottom: 2% !important;
+  }
+  .login form input {
+    font-size: 15px !important;
+    width: 100% !important;
+    margin-bottom: 1% !important;
+  }
+  .login button {
+    width: 50% !important;
+    font-size: 20px !important;
+    padding: 1% !important;
+    margin-bottom: 4%;
+  }
+
+  .login a {
+    font-size: 15px !important;
+  }
+  /*-----------------*/
+  .register h1 {
+    font-size: 28px !important;
+    margin-bottom: 6% !important;
+  }
+  .register form {
+    padding: 0 !important;
+  }
+  .register #formContainer {
+    width: 75% !important;
+  }
+  .register form label {
+    margin-bottom: 1% !important;
+    width: 100%;
+    font-size: 18px !important;
+  }
+  .register form input,
+  .register form select {
+    margin: 0;
+    text-align: center;
+    width: 100% !important;
+    font-size: 15px !important;
+    padding: 1% !important;
+  }
+  .register form .inputs {
+    flex-direction: column !important;
+    margin-bottom: 1.7% !important;
+  }
+  .alert {
+    padding: 1% 3% !important;
+    margin-bottom: 1% !important;
+    width: 90%;
+  }
+  .register button {
+    width: 50%;
+    font-size: 18px !important;
+  }
+  /*--------------------*/
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainCont {
+    padding-top: 4em !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .main #right {
+    display: none !important;
+  }
+
+  .main #left {
+    transform: translateY(100%);
+    padding: 5% !important;
+    padding-bottom: 25% !important;
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    height: auto !important;
+    margin-top: 15%;
+    border-radius: unset !important;
+    width: 100% !important;
+    z-index: 20;
+  }
+  .main #left .settcont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .main #left .settcont div:first-child {
+    width: 50%;
+  }
+
+  .main #left .settcont li a {
+    display: flex;
+    margin: 1.5% 0;
+  }
+
+  .main #left img {
+    width: 25% !important;
+    height: 25% !important;
+  }
+  .main #left p {
+    font-size: 15px !important;
+    color: black !important;
+  }
+  #left ul li a .fa-user-friends,
+  #left ul li a .fa-place-of-worship,
+  #left ul li a .fa-users {
+    font-size: 18px !important;
+  }
+  .main #left a {
+    font-size: 13px !important;
+    color: black !important;
+  }
+
+  .main .intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #mid #storyCont #leftD {
+    left: 5px !important;
+    height: 110px !important;
+  }
+  #mid #storyCont #rightD {
+    right: 5px !important;
+    height: 110px !important;
+  }
+  #mid #storyCont a {
+    transform: translateY(105%) !important;
+  }
+  .main .intro > div {
+    padding: 3%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .main .intro img {
+    width: 25%;
+    border-radius: 50%;
+  }
+  .main .intro > div div {
+    margin-left: 5%;
+  }
+  .main .intro p {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+  }
+  .main .intro .fa-cog {
+    font-size: 20px;
+  }
+
+  .main #mid {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .main #accStory {
+    margin-top: 5% !important;
+  }
+  #postView div:first-child div {
+    font-size: 12px !important;
+    width: 100% !important;
+    align-self: flex-start !important;
+  }
+  #postView div:first-child div img {
+    width: 25% !important;
+    margin-right: 0 !important;
+  }
+  #postView div:first-child ul {
+    top: 35% !important;
+    right: 8.5% !important;
+  }
+
+  #postView div:first-child div p {
+    font-size: 15px !important;
+  }
+  #postView p {
+    font-size: 15px !important;
+  }
+
+  #commentCont #comment {
+    margin: 3% 0 !important;
+    width: 250px !important;
+  }
+
+  #commentDis img {
+    width: 13% !important;
+  }
+
+  #postView button {
+    margin: 3% !important;
+  }
+  #mid #container1 {
+    width: 75px !important;
+    height: 80px !important;
+  }
+  #editForm form {
+    width: 95% !important;
+  }
+  #profileView {
+    width: 100% !important;
+  }
+  #profileView img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .dataCont {
+    width: 90% !important;
+  }
+  .dataCont .data {
+    margin: 1% 0 !important;
+  }
+  #profileView label {
+    font-size: 20px !important;
+  }
+  #FormDetails button {
+    font-size: 18px !important;
+    width: 35% !important;
+    margin: 2% !important;
+  }
+  .names {
+    flex-direction: column !important;
+  }
+
+  .ProfileEditHandler {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+    width: 100% !important;
+    transform: translate(0%, 0%) !important;
+  }
+  .editContainer {
+    width: 100% !important;
+  }
+  #contentContainer {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .imageContainer div {
+    margin-top: 5%;
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  #contentContainer div {
+    width: 100% !important;
+  }
+  #contentContainer label {
+    text-align: left;
+  }
+  #contentContainer label,
+  #contentContainer input,
+  #contentContainer select {
+    width: 80% !important;
+  }
+  #contentContainer label,
+  #contentContainer input,
+  #contentContainer select {
+    font-size: 15px !important;
+  }
+
+  .editContainer button {
+    padding: 0.7% 3%;
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 375px) {
+  .register h1 {
+    font-size: 30px !important;
+  }
+  .register button {
+    width: 35% !important;
+  }
+}
+
+@media (min-width: 420px) {
+}
+
+@media (min-width: 768px) {
+  #contentContainer {
+    flex-direction: row !important;
+  }
+  #mid #storyCont #leftD {
+    left: 55px !important;
+    height: 120px !important;
+  }
+  #mid #storyCont #rightD {
+    right: 55px !important;
+    height: 110px !important;
+  }
+  #mid #container2 {
+    transform: translateY(60%) !important;
+  }
+  #mid #storyCont a {
+    transform: translateY(25%) !important;
+  }
+  #iconCont {
+    transform: translateX(-150%) !important;
+  }
+  .Logo {
+    font-size: 30px !important;
+  }
+  /*------------*/
+  .login .formContainer {
+    width: 50% !important;
+  }
+  .login form label {
+    font-size: 22px !important;
+  }
+  .login form button {
+    width: 30% !important;
+  }
+  /*---------------*/
+
+  .register h1 {
+    font-size: 35px !important;
+    margin-bottom: 3% !important;
+  }
+  .register #formContainer {
+    width: 45% !important;
+  }
+  .register .inputs {
+    margin-bottom: 2.5% !important;
+  }
+  .register form label {
+    font-size: 22px !important;
+    margin-bottom: 1% !important;
+  }
+  /*----------------*/
+  main {
+    flex-direction: row;
+  }
+
+  .main #mid {
+    width: 50% !important;
+    height: 80vh !important;
+  }
+  .mainCont {
+    padding: 0% 1% 1% 1% !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+  }
+  .main #right {
+    display: flex !important;
+  }
+  .main #accStory {
+    margin: 0 !important;
+  }
+  .main #left {
+    padding-bottom: 5% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    transform: translateY(0) !important;
+    margin: 0 !important;
+    position: unset !important;
+    top: 0;
+    left: 0;
+    padding: 2% !important;
+    width: 25% !important;
+    border-radius: 5px !important;
+    border: none !important;
+    height: 80vh !important;
+    z-index: 0 !important;
+  }
+  .main #left p {
+    font-size: 16px !important;
+    color: white !important;
+  }
+  .main #left h4,
+  .main #left ul li a {
+    color: white !important;
+  }
+
+  .main #left ul li a {
+    margin: 2% !important;
+    font-size: 15px !important;
+  }
+
+  .main #left h4 {
+    font-size: 20px !important;
+    color: rgb(253, 95, 95) !important;
+  }
+  .main #left img {
+    width: 40% !important;
+  }
+  .main #left .settcont {
+    flex-direction: column !important;
+  }
+
+  .main #left .settcont div:first-child {
+    margin-top: 5% !important;
+  }
+  #postView {
+    padding-right: 0 2% !important;
+    width: 100% !important;
+  }
+
+  #postView div:first-child div div:first-child {
+    align-self: flex-start !important;
+    width: 50% !important;
+    font-size: 15px !important;
+  }
+
+  #postView div:first-child button {
+    font-size: 1.5em !important;
+  }
+
+  #postView img {
+    margin: 0 !important;
+    width: 12% !important;
+  }
+  #mid .btns button {
+    padding: 0.7% 5% !important;
+  }
+  #postView div:first-child div img {
+    width: 35% !important;
+  }
+  #postView p {
+    font-size: 18px !important;
+  }
+
+  #commentCont #comment {
+    width: 300px !important;
+  }
+
+  #commentDis p {
+    font-size: 13px !important;
+  }
+  #mid form button {
+    padding: 0.7% 2% !important;
+    margin-bottom: 3% !important;
+  }
+  #editForm form {
+    width: 60% !important;
+  }
+  #FormDetails button {
+    width: 20% !important;
+    font-size: 22px !important;
+  }
+  .dataCont {
+    width: 60% !important;
+  }
+  .names {
+    flex-direction: row !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imageContainer div {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  #contentContainer label,
+  #contentContainer input,
+  #contentContainer select {
+    font-size: 20px !important;
+  }
+  #postCont {
+    padding-bottom: 1% !important;
+  }
+  #mid form button {
+    margin: 3% 1% !important;
+  }
+  #postView div:first-child div ul {
+    font-size: 22px !important;
+  }
+  #postView div:first-child button {
+    font-size: 1.8em !important;
+  }
+  #mid #storyCont a {
+    transform: translateY(75%) !important;
+  }
+  #mid #container1 {
+    width: 100px !important;
+    height: 120px !important;
+  }
+  #mid #storyCont #leftD {
+    left: 90px !important;
+  }
+  #mid #storyCont #rightD {
+    right: 90px !important;
+  }
+  .Logo {
+    font-size: 30px !important;
+  }
+  /*-------------*/
+  .footer {
+    font-size: 18px !important;
+  }
+  /*--------------*/
+  .register h1 {
+    font-size: 50px !important;
+    margin-bottom: 7% !important;
+  }
+  .register #formContainer {
+    width: 50% !important;
+  }
+  .register button {
+    width: 30% !important;
+  }
+  .register form label {
+    margin-bottom: 0 !important;
+    font-size: 25px !important;
+  }
+  .register form input,
+  .register form select {
+    text-align: center;
+    width: 100% !important;
+    font-size: 20px !important;
+    padding: 1% !important;
+  }
+  .register form .inputs {
+    flex-direction: row !important;
+    margin-bottom: 4% !important;
+  }
+  /*------------*/
+  .login .fa-home {
+    font-size: 15em !important;
+  }
+  .login .formContainer {
+    width: 35% !important;
+  }
+  .login form label {
+    font-size: 30px !important;
+  }
+  .login form button {
+    width: 40% !important;
+  }
+  /*-----------------*/
+  #postView p {
+    font-size: 22px !important;
+  }
+  #commentDis p {
+    font-size: 16px !important;
+  }
+
+  #profileView label {
+    font-size: 25px !important;
+  }
+
+  .dataCont {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .imageContainer div {
+    margin-bottom: 0 !important;
+    text-align: center;
+    width: 300px !important;
+    height: 300px !important;
+  }
+  #contentContainer label,
+  #contentContainer input,
+  #contentContainer select {
+    font-size: 30px !important;
+  }
+  .editContainer button {
+    font-size: 25px !important;
+  }
+  #editForm form {
+    width: 40% !important;
+  }
+  .fa-caret-down {
+    font-size: 40px !important;
+  }
+  /*-------------------*/
+  .Logo {
+    font-size: 35px !important;
+  }
+  /*-------------*/
+  .footer {
+    font-size: 20px !important;
+  }
+  /*--------------*/
+  .register h1 {
+    font-size: 50px !important;
+    margin-bottom: 3% !important;
+  }
+  .register #formContainer {
+    width: 45% !important;
+  }
+  .register button {
+    width: 25% !important;
+  }
+  .register form label {
+    margin-bottom: 0 !important;
+    font-size: 35px !important;
+  }
+  .register form input,
+  .register form select {
+    text-align: center;
+    width: 100% !important;
+    font-size: 20px !important;
+    padding: 1% !important;
+  }
+  .register form .inputs {
+    flex-direction: row !important;
+    margin-bottom: 2.5% !important;
+  }
+  .register button {
+    font-size: 25px !important;
+    width: 22% !important;
+  }
+  /*------------------*/
+  .login .formContainer {
+    width: 30% !important;
+  }
+  .login form label {
+    margin-bottom: 0 !important;
+    font-size: 35px !important;
+  }
+  .login form input,
+  .login form select {
+    font-size: 23px !important;
+  }
+  .login a {
+    font-size: 20px !important;
+  }
+  /*-------------*/
+  .main #left p {
+    font-size: 28px !important;
+  }
+  .main #left img {
+    width: 30% !important;
+  }
+  .main #left ul li a {
+    margin: 2% !important;
+    font-size: 22px !important;
+  }
+
+  .main #left .settcont a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  #left ul li a .fa-user-friends,
+  #left ul li a .fa-place-of-worship,
+  #left ul li a .fa-users {
+    font-size: 23px !important;
+  }
+  /*--------------------*/
+  #postView div:first-child div img {
+    width: 30% !important;
+  }
+  #postView div:first-child div div:first-child {
+    font-size: 25px !important;
+    width: 40% !important;
+  }
+
+  #postView div:first-child button {
+    font-size: 2.5em !important;
+  }
+
+  #postView img {
+    width: 10% !important;
+  }
+
+  #commentCont #comment {
+    width: 600px !important;
+  }
+
+  .dataCont {
+    width: 45% !important;
+  }
+  #profileView label {
+    font-size: 35px !important;
+  }
+  #FormDetails button {
+    width: 20% !important;
+    font-size: 30px !important;
+  }
+} ;

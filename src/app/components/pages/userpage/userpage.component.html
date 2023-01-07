@@ -1,0 +1,44 @@
+<section id="userPage">
+    <div class="mainCont">
+
+        <div class="row">
+
+            <section class="col-2"></section>
+            <section id="content" class="col-8 d-flex flex-column justify-content-start align-items-center">
+                <div id="cont" class="d-flex flex-column justify-content-center align-items-center ">
+                    <div id="top" class="d-flex flex-column justify-content-center align-items-center mb-3">
+                        <div class="effectLeft"></div>
+                        <div class="coverLeft"></div>
+                        <img [src]="userImg">
+                        <p class="m-0 p-0">{{currentUser.firstname}} {{currentUser.lastname}}</p>
+                        <div class="effectRight"></div>
+                        <div class="coverRight"></div>
+                    </div>
+                    <button id="add" class="btn btn-success" (click)="addFriend()" [ngClass]="friendsBtnStatus? 'toggleAdd' : ''">Add</button>
+                    <button id="delete" class="btn btn-danger" (click)="removeFriend()" [ngClass]="friendsBtnStatus? 'toggleDelete' : ''">Delete</button>
+                    <hr>
+                </div>
+                <div id="posts" *ngFor="let post of currentUserPosts" class="d-flex flex-column justify-content-center align-items-center">
+                    <div id="postCont" class="d-flex flex-column align-items-center justify-content-center">
+                        <div id="postDet" >
+                            <img class="img-fluid" [src]="userImg" alt="">
+                            <p>{{ post.post }}</p>
+                        </div>
+                        <div id="commentCont" >
+                            <div id="comment" class="d-flex flex-row justify-content-start align-items-center">
+                                <img class="img-fluid" [src]="userImage" alt="">
+                                <textarea placeholder="Comment"></textarea>
+                            </div>
+                            <button class="btn btn-primary">Comment</button>
+                        </div>
+
+                    </div>
+                   
+                </div>
+              
+            </section>
+            <section class="col-2"></section>
+        </div>
+
+    </div>
+</section>
