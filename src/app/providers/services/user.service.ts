@@ -16,8 +16,8 @@ export class UserService {
   public posts: any;
   public selectedUser: any;
 
-  UserURL = 'https://pear-confused-colt.cyclic.app/api/user';
-  PostURL = 'https://pear-confused-colt.cyclic.app/api/post';
+  UserURL = 'https://pear-confused-colt.cyclic.app/api/user/';
+  PostURL = 'https://pear-confused-colt.cyclic.app/api/post/';
 
   public Users = [];
 
