@@ -16,8 +16,8 @@ export class UserService {
   public posts: any;
   public selectedUser: any;
 
-  UserURL = 'https://kind-erin-tuna-belt.cyclic.app/api/user/';
-  PostURL = 'https://kind-erin-tuna-belt.cyclic.app/api/post/';
+  UserURL = 'https://mocha-29is.onrender.com/api/user/';
+  PostURL = 'https://mocha-29is.onrender.com/api/post/';
 
   public Users = [];
 
